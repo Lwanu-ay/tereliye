@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koleksi Buku Tere Liye | Katalog Lengkap</title>
+    <link href="fonts.googleapis.com" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #e67e22;
+            --bg: #f9f9f9;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images.unsplash.com');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        header p { font-weight: 300; opacity: 0.9; }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .category-title {
+            border-left: 5px solid var(--accent);
+            padding-left: 15px;
+            margin: 40px 0 20px;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .book-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #eee;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .book-card h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .book-card p {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+        }
+
+        .btn-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Katalog Buku Tere Liye</h1>
+        <p>Daftar lengkap karya novelis inspiratif Indonesia "tapi maaf sebelumnya karena admin hai.ulwan salah memasukkan website ini ke daftar website tiktok, karena saya nggak punya akun tiktok-ay </p>
+         <p>Dan satu lagi kenapa saya punya nama (lwanuay) karena itu adalah kata pig latin dengan menaruh huruf depan pada suatu kata atau namamu dan menambah 'ay' ke namamu.Paham!<p2>
+    </header>
+
+    <div class="container">
+        
+        <!-- Seri Dunia Paralel (Bumi) -->
+        <h2 class="category-title">Seri Dunia Paralel(seru ni) (Bumi)</h2>
+        <div class="book-grid">
+            <div class="book-card">
+                <div><h3>Bumi</h3><p>Buku #1 - Awal petualangan Raib, Seli, dan Ali.</p></div>
+                <a href="#" class="btn-link">Lihat Detail</a>
+            </div>
+            <div class="book-card">
+                <div><h3>Bulan</h3><p>Buku #2 - Kompetisi di klan Matahari.</p></div>
+                <a href="#" class="btn-link">Lihat Detail</a>
+            </div>
+            <div class="book-card">
+                <div><h3>Matahari</h3><p>Buku #3 - Perjalanan ke klan Bintang.</p></div>
+                <a href="#" class="btn-link">Lihat Detail</a>
+            </div>
+            <div class="book-card">
+                <div><h3>Bintang, Ceros & Batozar, Komet, dll.</h3><p>Lanjutan saga epik dunia paralel.</p></div>
+                <a href="#" class="btn-link">Lihat Semua Seri</a>
+            </div>
+        </div>
+
+        <!-- Seri Aksi -->
+        <h2 class="category-title">Seri Aksi (Politik & Ekonomi)</h2>
+        <div class="book-grid">
+            <div class="book-card">
+                <div><h3>Negeri Para Bedebah</h3><p>Kisah Thomas dalam dunia finansial yang keras.</p></div>
+                <a href="#" class="btn-link">Lihat Detail</a>
+            </div>
+            <div class="book-card">
+                <div><h3>Negeri di Ujung Tanduk</h3><p>Intrik politik dan pertarungan kekuasaan.</p></div>
+                <a href="#" class="btn-link">Lihat Detail</a>
+            </div>
+            <div class="book-card">
+                <div><h3>Pulang</h3><p>Kisah Bujang dalam dunia Shadow Economy.</p></div>
+                <a href="#" class="btn-link">Lihat Detail</a>
+            </div>
+            <div class="book-card">
+                <div><h3>Pergi</h3><p>Kelanjutan perjalanan Bujang menemukan jati diri.</p></div>
+                <a href="#" class="btn-link">Lihat Detail</a>
+            </div>
+        </div>
+
+        <!-- Seri Perasaan / Romansa -->
+        <h2 class="category-title">Seri Romansa & Perasaan</h2>
+        <div class="book-grid">
+            <div class="book-card">
+                <div><h3>Daun yang Jatuh Tak Pernah Membenci Angin</h3><p>Kisah cinta yang tulus dan dewasa.</p></div>
+                <a href="#" class="btn-link">Lihat Detail</a>
+            </div>
+            <div class="book-card">
+                <div><h3>Hafalan Shalat Delisa</h3><p>Kisah mengharukan tentang tsunami Aceh.</p></div>
+                <a href="#" class="btn-link">Lihat Detail</a>
+            </div>
+            <div class="book-card">
+                <div><h3>Moga Bunda Disayang Allah</h3><p>Perjuangan seorang guru dan anak spesial.</p></div>
+                <a href="#" class="btn-link">Lihat Detail</a>
+            </div>
+        </div>
+
+        <!-- Buku Terbaru / Lainnya -->
+        <h2 class="category-title">Karya Lainnya</h2>
+        <div class="book-grid">
+            <div class="book-card">
+                <div><h3>Tentang Kamu</h3><p>Perjalanan menelusuri jejak hidup Sri Ningsih.</p></div>
+                <a href="#" class="btn-link">Lihat Detail</a>
+            </div>
+            <div class="book-card">
+                <div><h3>Rembulan Tenggelam di Wajahmu</h3><p>Pertanyaan-pertanyaan besar tentang hidup.</p></div>
+                <a href="#" class="btn-link">Lihat Detail</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Katalog Penggemar Tere Liye</p>
+        <p>Dibuat untuk keperluan informasi koleksi buku.</p>
+    </footer>
+
+</body>
+</html>
