@@ -1,200 +1,153 @@
-<!DOCTYPE html>
+
+
+    <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koleksi Buku Tere Liye | Katalog Lengkap</title>
+    <title>Katalog Buku Tere Liye | 2025</title>
+    
+    <!-- Link Font Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="fonts.googleapis.com" rel="stylesheet">
+
     <style>
-        :root {
-            --primary: #2c3e50;
-            --accent: #e67e22;
-            --bg: #f9f9f9;
-            --white: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
         body {
-            background-color: var(--bg);
-            color: #333;
-            line-height: 1.6;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8f9fa;
+            color: #2d3436;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images.unsplash.com');
-            background-size: cover;
-            background-position: center;
-            color: white;
             text-align: center;
-            padding: 80px 20px;
+            margin-bottom: 50px;
         }
 
-        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        header p { font-weight: 300; opacity: 0.9; }
-
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
+        header h1 {
+            font-weight: 800;
+            font-size: 2.5rem;
+            letter-spacing: -0.04em;
+            margin-bottom: 10px;
         }
 
-        .category-title {
-            border-left: 5px solid var(--accent);
-            padding-left: 15px;
-            margin: 40px 0 20px;
-            color: var(--primary);
+        /* TATA LETAK GAMBAR DI PINGGIR */
+        .buku-card {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .buku-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .buku-card img {
+            width: 140px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-right: 30px; /* Jarak antara gambar dan teks */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .buku-info {
+            flex: 1;
+        }
+
+        .buku-info h2 {
+            margin: 0 0 10px 0;
+            font-weight: 700;
             font-size: 1.5rem;
         }
 
-        .book-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
+        .buku-info p {
+            line-height: 1.6;
+            color: #636e72;
+            margin-bottom: 20px;
         }
 
-        .book-card {
-            background: var(--white);
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            border: 1px solid #eee;
-        }
-
-        .book-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        .book-card h3 {
-            font-size: 1.1rem;
-            color: var(--primary);
-            margin-bottom: 5px;
-        }
-
-        .book-card p {
-            font-size: 0.85rem;
-            color: #7f8c8d;
-        }
-
-        .btn-link {
+        /* TOMBOL DETAIL AGAR TIDAK HILANG */
+        .btn-detail {
             display: inline-block;
-            margin-top: 15px;
-            padding: 8px 15px;
-            background-color: var(--accent);
+            padding: 10px 24px;
+            background-color: #007AFF; /* Biru Modern */
             color: white;
             text-decoration: none;
-            border-radius: 6px;
-            font-size: 0.8rem;
+            border-radius: 10px;
             font-weight: 600;
-            text-align: center;
+            font-size: 0.9rem;
+            transition: 0.3s;
         }
 
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #95a5a6;
-            font-size: 0.9rem;
+        .btn-detail:hover {
+            background-color: #0056b3;
+            box-shadow: 0 4px 12px rgba(0,122,255,0.3);
+        }
+
+        @media (max-width: 600px) {
+            .buku-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .buku-card img {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
 <body>
 
+<div class="container">
     <header>
         <h1>Katalog Buku Tere Liye</h1>
-        <p>Daftar lengkap karya novelis inspiratif Indonesia "tapi maaf sebelumnya karena admin hai.ulwan salah memasukkan website ini ke daftar website tiktok, karena saya nggak punya akun tiktok-ay </p>
-         <p>Dan satu lagi kenapa saya punya nama (lwanuay) karena itu adalah kata pig latin dengan menaruh huruf depan pada suatu kata atau namamu dan menambah 'ay' ke namamu.Paham!<p2>
+        <p>Koleksi Lengkap 2025 - Dari Seri Bumi hingga Novel Terbaru</p>
     </header>
 
-    <div class="container">
-        
-        <!-- Seri Dunia Paralel (Bumi) -->
-        <h2 class="category-title">Seri Dunia Paralel(seru ni) (Bumi)</h2>
-        <div class="book-grid">
-            <div class="book-card">
-                <div><h3>Bumi</h3><p>Buku #1 - Awal petualangan Raib, Seli, dan Ali.</p></div>
-                <a href="#" class="btn-link">Lihat Detail</a>
-            </div>
-            <div class="book-card">
-                <div><h3>Bulan</h3><p>Buku #2 - Kompetisi di klan Matahari.</p></div>
-                <a href="#" class="btn-link">Lihat Detail</a>
-            </div>
-            <div class="book-card">
-                <div><h3>Matahari</h3><p>Buku #3 - Perjalanan ke klan Bintang.</p></div>
-                <a href="#" class="btn-link">Lihat Detail</a>
-            </div>
-            <div class="book-card">
-                <div><h3>Bintang, Ceros & Batozar, Komet, dll.</h3><p>Lanjutan saga epik dunia paralel.</p></div>
-                <a href="#" class="btn-link">Lihat Semua Seri</a>
-            </div>
+    <!-- Buku 1 -->
+    <div class="buku-card">
+        <img src="via.placeholder.com" alt="Cover Buku Bumi">
+        <div class="buku-info">
+            <h2>Bumi (Seri Paralel)</h2>
+            <p>Awal petualangan Raib, Seli, dan Ali di dunia paralel. Novel ini adalah pembuka salah satu seri fantasi terbesar di Indonesia.</p>
+            <a href="https://www.gramedia.com/products/bumi-2" target="_blank" class="btn-detail">Lihat Detail</a>
         </div>
-
-        <!-- Seri Aksi -->
-        <h2 class="category-title">Seri Aksi (Politik & Ekonomi)</h2>
-        <div class="book-grid">
-            <div class="book-card">
-                <div><h3>Negeri Para Bedebah</h3><p>Kisah Thomas dalam dunia finansial yang keras.</p></div>
-                <a href="#" class="btn-link">Lihat Detail</a>
-            </div>
-            <div class="book-card">
-                <div><h3>Negeri di Ujung Tanduk</h3><p>Intrik politik dan pertarungan kekuasaan.</p></div>
-                <a href="#" class="btn-link">Lihat Detail</a>
-            </div>
-            <div class="book-card">
-                <div><h3>Pulang</h3><p>Kisah Bujang dalam dunia Shadow Economy.</p></div>
-                <a href="#" class="btn-link">Lihat Detail</a>
-            </div>
-            <div class="book-card">
-                <div><h3>Pergi</h3><p>Kelanjutan perjalanan Bujang menemukan jati diri.</p></div>
-                <a href="#" class="btn-link">Lihat Detail</a>
-            </div>
-        </div>
-
-        <!-- Seri Perasaan / Romansa -->
-        <h2 class="category-title">Seri Romansa & Perasaan</h2>
-        <div class="book-grid">
-            <div class="book-card">
-                <div><h3>Daun yang Jatuh Tak Pernah Membenci Angin</h3><p>Kisah cinta yang tulus dan dewasa.</p></div>
-                <a href="#" class="btn-link">Lihat Detail</a>
-            </div>
-            <div class="book-card">
-                <div><h3>Hafalan Shalat Delisa</h3><p>Kisah mengharukan tentang tsunami Aceh.</p></div>
-                <a href="#" class="btn-link">Lihat Detail</a>
-            </div>
-            <div class="book-card">
-                <div><h3>Moga Bunda Disayang Allah</h3><p>Perjuangan seorang guru dan anak spesial.</p></div>
-                <a href="#" class="btn-link">Lihat Detail</a>
-            </div>
-        </div>
-
-        <!-- Buku Terbaru / Lainnya -->
-        <h2 class="category-title">Karya Lainnya</h2>
-        <div class="book-grid">
-            <div class="book-card">
-                <div><h3>Tentang Kamu</h3><p>Perjalanan menelusuri jejak hidup Sri Ningsih.</p></div>
-                <a href="#" class="btn-link">Lihat Detail</a>
-            </div>
-            <div class="book-card">
-                <div><h3>Rembulan Tenggelam di Wajahmu</h3><p>Pertanyaan-pertanyaan besar tentang hidup.</p></div>
-                <a href="#" class="btn-link">Lihat Detail</a>
-            </div>
-        </div>
-
     </div>
 
-    <footer>
-        <p>&copy; 2025 Katalog Penggemar Tere Liye</p>
-        <p>Dibuat untuk keperluan informasi koleksi buku.</p>
-    </footer>
+    <!-- Buku 2 -->
+    <div class="buku-card">
+        <img src="via.placeholder.com" alt="Cover Buku SagaraS">
+        <div class="buku-info">
+            <h2>SagaraS</h2>
+            <p>Mengungkap asal-usul Ali dan perjalanan ke klan yang sangat jauh dan misterius. Seri Dunia Paralel ke-13.</p>
+            <a href="https://www.gramedia.com/products/sagaras" target="_blank" class="btn-detail">Lihat Detail</a>
+        </div>
+    </div>
+
+    <!-- Buku 3 -->
+    <div class="buku-card">
+        <img src="via.placeholder.com" alt="Cover Matahari Minor">
+        <div class="buku-info">
+            <h2>Matahari Minor</h2>
+            <p>Update 2025: Kelanjutan seru dari pertarungan di dunia paralel dengan kekuatan-kekuatan baru yang tidak terduga.</p>
+            <a href="https://www.gramedia.com/products/matahari-minor" target="_blank" class="btn-detail">Lihat Detail</a>
+        </div>
+    </div>
+
+</div>
 
 </body>
 </html>
